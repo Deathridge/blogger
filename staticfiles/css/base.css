@@ -1,0 +1,51 @@
+body {
+	margin: 0px;
+}
+
+.flex-container {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+img {max-width:100%;}
+
+
+@media screen and (min-width: 1200px){
+	#flex-image-1{
+		width: 800px;
+		
+	}
+	#flex-image-2 {
+		width: 800px;
+		
+	}	
+
+	#flex-text-1 {
+		
+		flex-grow:2;
+	}
+	
+	.flex-item {
+		margin: 5px;
+	}
+	.flex-item p{
+		margin-left:40px;
+		margin-right: 40px;
+
+	}
+
+}
+
+@media screen and (max-width: 1200px){
+
+	.flex-item {
+		margin-bottom: 5px;
+	}
+
+	.flex-item p {
+		margin: 10px;
+	}
+}

@@ -16,7 +16,7 @@ body {
   	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 	flex: 1;
 	flex-direction: column;
-
+	text-align: center;
 
 }	
 

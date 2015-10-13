@@ -1,45 +1,62 @@
 body {
+	
 	margin: 0px;
+	padding:0px;
+	font-family: 'Roboto Condensed' , serif;
+	display: flex;
+  	min-height: 100vh;	
 }
 
+
+
 .flex-container {
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
+	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+	flex: 1;
+	flex-direction: column;
+
+
+}	
 
 img {max-width:100%;}
 
 
-@media screen and (min-width: 1200px){
-	#flex-image-1{
-		width: 800px;
-		
+@media screen and (min-width: 800px){
+	.flex-container {
+		flex-direction: row;
+		flex: 1;
 	}
-	#flex-image-2 {
-		width: 800px;
-		
-	}	
 
-	#flex-text-1 {
-		
-		flex-grow:2;
+	.content-container {
+		flex: 1;
 	}
-	
+
+	#column-left {
+		flex: 0 0 12em;
+		order: -1;
+		background-color: #ccccff;
+	}
+
+	#column-right {
+		flex: 0 0 12em;
+		background-color: #ccccff;
+	}
+
 	.flex-item {
 		margin: 5px;
 	}
-	.flex-item p{
-		margin-left:40px;
-		margin-right: 40px;
 
-	}
-
+	
+	
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 800px){
+
+	.flex-container {
+		flex-direction: row;
+	}
 
 	.flex-item {
 		margin-bottom: 5px;

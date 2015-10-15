@@ -36,12 +36,14 @@ img {max-width:100%;}
 	#column-left {
 		flex: 0 0 15em;
 		order: -1;
-		background-color: #039099;
+		background-color: #01659F;
+
 	}
 
 	#column-right {
 		flex: 0 0 15em;
-		background-color: #039099;
+		background-color: #01659F;
+		
 	}
 
 	.flex-text {
@@ -52,9 +54,9 @@ img {max-width:100%;}
 		-moz-box-shadow:     2px 2px 20px #000000;
    		-webkit-box-shadow:  2px 2px 20px #000000;
    		box-shadow:          2px 2px 20px #000000;
-   		background-color: #035099;
+   		background-color: #0350A9;
 		width: 12em;
-		border-radius: 5px;		
+			
 		margin: 0 auto;		
 		padding-bottom: 2px;
 		padding-top: 2px;
@@ -86,9 +88,11 @@ img {max-width:100%;}
 	}	
 }
 
+
+
 @media screen and (max-width: 800px){
 	.flex-menu {		
-		background-color: #035099; 		
+		background-color: #0350A9; 		
 		height: 2em;	
 		padding-top: 0.5em;
 		padding-bottom: 0.5em;
@@ -106,13 +110,13 @@ img {max-width:100%;}
 	#column-left {
 		order: -1;
 		flex-direction: row;
-		flex:1;
+
 		display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
   		display: -ms-flexbox;  /* TWEENER - IE 10 */
   		display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   		display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-  		margin: 0 auto;
-
+  		
+		background-color: #01709F;
 	}
 
 

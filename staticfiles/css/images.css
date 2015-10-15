@@ -1,0 +1,148 @@
+body {
+	
+	margin: 0px;
+	padding:0px;
+	font-family: 'Roboto Condensed' , serif;
+	display: flex;
+  	min-height: 100vh;	
+}
+
+
+
+.flex-container {
+	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+	flex: 1;
+	flex-direction: column;
+	text-align: center;
+
+}	
+
+img {max-width:100%;}
+
+
+@media screen and (min-width: 800px){
+	.flex-container {
+		flex-direction: row;
+		flex: 1;
+	}
+
+
+
+	.content-container {
+		display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  		display: -ms-flexbox;  /* TWEENER - IE 10 */
+  		display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  		display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+		list-style: none;
+		flex-flow: row wrap;
+		-webkit-flex-flow: row wrap;
+	}
+
+	.content-container .flex-item {
+
+		max-width: 33.333%;
+
+	}
+
+	#column-left {
+		flex: 0 0 15em;
+		order: -1;
+		background-color: #01659F;
+
+	}
+
+	#column-right {
+		flex: 0 0 15em;
+		background-color: #01659F;
+		
+	}
+
+	.flex-text {
+		margin: 5px;
+	}
+
+
+	.flex-menu {		
+		-moz-box-shadow:     2px 2px 20px #000000;
+   		-webkit-box-shadow:  2px 2px 20px #000000;
+   		box-shadow:          2px 2px 20px #000000;
+   		background-color: #0350A9;
+		width: 12em;
+			
+		margin: 0 auto;		
+		padding-bottom: 2px;
+		padding-top: 2px;
+
+	}
+
+	.flex-menu > p {
+		color: #ffffff;
+		text-shadow: 1px 1px 0px #000000;
+		text-align: center;
+		vertical-align: middle;
+
+	}
+
+	.flex-menu:hover {
+		-moz-box-shadow:    0 0 0px #000000;
+   		-webkit-box-shadow: 0 0 0px #000000;
+   		box-shadow:         0 0 0px #000000;
+	}
+
+	.flex-menu:active {
+		-moz-box-shadow:     inset 2px 2px 20px #000000;
+   		-webkit-box-shadow:  inset 2px 2px 20px #000000;
+   		box-shadow:          inset 2px 2px 20px #000000;
+	}
+
+	.flex-menu-seperator {
+		height: 10px;
+	}	
+
+	.flex-item-seperator {
+		
+	}
+}
+
+
+
+@media screen and (max-width: 800px){
+	.flex-menu {		
+		background-color: #0350A9; 		
+		height: 2em;	
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		-moz-box-shadow:     2px 2px 1px #000000;
+   		-webkit-box-shadow:  2px 2px 1px #000000;
+   		box-shadow:          2px 2px 1px #000000;
+   	}
+	
+	.flex-menu:active {
+		-moz-box-shadow:     inset 2px 2px 1px #000000;
+   		-webkit-box-shadow:  inset 2px 2px 1px #000000;
+   		box-shadow:          inset 2px 2px 1px #000000;
+	}
+	
+	#column-left {
+		order: -1;
+		flex-direction: row;		
+		display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  		display: -ms-flexbox;  /* TWEENER - IE 10 */
+  		display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  		display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  		
+		background-color: #01709F;
+	}
+
+
+	.flex-item {
+		margin-bottom: 5px;
+	}
+
+	.flex-item p {
+		margin: 10px;
+	}
+}

@@ -1,5 +1,7 @@
 from django.db import models
 import os
+import datetime
+from django.utils import timezone
 
 # Create your models here.
 class Post(models.Model):
@@ -16,7 +18,7 @@ class Post(models.Model):
 		return super(Post, self).save(*args, **kwargs)
 
 def get_image_path(instance, filename):
-	return os.path.join('staticfiles/images', filename)
+	return os.path.join('', filename)
 
 class Image(models.Model):
 	Title = models.CharField(max_length=30)

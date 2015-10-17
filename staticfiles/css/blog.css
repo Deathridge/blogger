@@ -37,12 +37,7 @@ img {max-width:100%;}
 
 
 	.content-container {
-		flex: 1;
-		display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-  		display: -ms-flexbox;  /* TWEENER - IE 10 */
-  		display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-  		display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-  		flex-direction: column;
+		flex: 1;	
 	}
 
 
@@ -57,8 +52,7 @@ img {max-width:100%;}
 		
 		flex-basis: auto;
 		max-width: 75%;
-		margin-left: 12.5%;
-		margin-right: 12.5%;
+	margin: 0 auto;
 	}
 
 

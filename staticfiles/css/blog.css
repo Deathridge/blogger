@@ -14,24 +14,13 @@ html,body {
   	display: -ms-flexbox;  /* TWEENER - IE 10 */
   	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-	flex: 1;
+
 	flex-direction: column;
 	text-align: center;
 	height: 100vh;
 }	
 
 img {max-width:100%;}
-
-
-
-	.flex-container {
-		flex-direction: column;
-		flex: 1;
-	}
-
-	.content-container {
-		flex: 1;
-	}
 
 	#column-left {
 		order: -1;
@@ -44,6 +33,14 @@ img {max-width:100%;}
 		margin-bottom: 5px;
 		padding:5px;
 	}
+
+
+
+	.content-container {
+		flex: 1;
+	}
+
+
 	
 	.content-container .flex-item img{
 		

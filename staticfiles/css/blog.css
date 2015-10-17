@@ -21,8 +21,7 @@ html,body {
 }	
 
 img {max-width:100%;}
-	.flex-container {
-		flex-direction: column;
+	.flex-container {		
 		flex: 1;
 	}
 

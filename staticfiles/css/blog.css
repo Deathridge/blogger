@@ -20,8 +20,7 @@ html,body {
 }	
 
 img {max-width:100%;}
-	.flex-container {
-		flex-direction: column;
+	.flex-container {		
 		flex: 1;
 	}
 
@@ -32,10 +31,6 @@ img {max-width:100%;}
   		display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 		flex-flow: column;
 		flex: 1;
-				
-		-webkit-flex-flow: column;
-		justify-content:  space-around;		
-		align-items: center;
 		overflow:auto;
 	}
 
@@ -51,6 +46,8 @@ img {max-width:100%;}
 		padding:5px;
 	}
 
+
+
 	
 	.content-container .flex-item img{
 		
@@ -65,8 +62,9 @@ img {max-width:100%;}
 		margin: 0 auto;
 	}
 
-	
-	#column-right {		
+
+	#column-right {
+		
 		flex: 0 0 3em;
 		background-color: #01659F;
 		

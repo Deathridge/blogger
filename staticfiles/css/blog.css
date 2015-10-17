@@ -31,7 +31,7 @@ img {max-width:100%;}
   		display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 		flex-flow: column;
 		flex: 1;
-		overflow:auto;
+		overflow-y:auto;
 	}
 
 	#column-left {

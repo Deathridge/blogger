@@ -17,10 +17,10 @@ html,body {
 
 	flex-direction: column;
 	text-align: center;
-	height: 100vh;
+
 }	
 
-/*img {max-width:100%;}*/
+img {max-width:100%;}
 	.flex-container {
 		flex-direction: column;
 		flex: 1;
@@ -31,11 +31,7 @@ html,body {
   		display: -ms-flexbox;  /* TWEENER - IE 10 */
   		display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   		display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-		list-style: none;
-		flex-flow: row wrap;
-		-webkit-flex-flow: row wrap;
-		justify-content:  space-around;		
-		align-items: center;
+	
 	}
 
 	#column-left {
@@ -58,13 +54,16 @@ html,body {
 
 
 	
-	.content-container .flex-item {
+	.content-container .flex-item img{
 		
 		flex-basis: auto;
 		max-width: 65%;
 	}
 
 	.flex-text{
+		
+		flex-basis: auto;
+		max-width: 75%;
 		margin: 0 auto;
 	}
 

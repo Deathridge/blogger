@@ -68,6 +68,7 @@ img {max-width:100%;}
 
 
 	#column-right {
+		order: 2;
 		flex: 0 0 3em;
 		background-color: #01659F;
 		

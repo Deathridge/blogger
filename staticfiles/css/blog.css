@@ -124,6 +124,6 @@ img {max-width:100%;}
 	}
 
 	.content-container {
-		overflow: visible;
+		overflow: initial;
 	}
 }

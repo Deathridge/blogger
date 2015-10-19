@@ -61,11 +61,6 @@ img {max-width:100%;}
 
 	}
 
-	#column-right {
-		flex: 0 0 3em;
-		background-color: #01659F;
-		
-	}
 
 	.flex-text {
 		margin: 5px;

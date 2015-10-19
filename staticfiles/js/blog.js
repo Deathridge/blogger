@@ -25,7 +25,7 @@ $( document ).ready(function() {
 		var url = posts[i].url;
 		
 		$('.content-container').append('<div class="flex-item flex-text"><h1>'+ title+ ' </h1><p>'+content+'</p></div>');
-		$('.content-container').append('<div class=image-container id='+created+'></div>')
+		$('.content-container').append('<div class=image-container id='+i+'></div>')
 		for (var j=0;j<images.length;j++){
 			
 			$.ajax({
@@ -33,7 +33,7 @@ $( document ).ready(function() {
 				async: false,
 				url: images[j],
 				success: function(data){
-					var id = "#" + created;
+					var id = "#" + i;
 					$(id).append('<div class="flex-item"><img src='+data.Image+'></img></div>');
 				}
 			});

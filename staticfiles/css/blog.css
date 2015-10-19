@@ -46,7 +46,8 @@ img {max-width:100%;}
 		align-items: center;
 	}
 
-	.image-container img {
+	.image-container .flex-item {
+		flex-basis: auto;
 		max-width: 50%;
 	}
 

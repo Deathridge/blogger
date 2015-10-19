@@ -26,12 +26,13 @@ $( document ).ready(function() {
 		
 		$('.content-container').append('<div class="flex-item flex-text"><h1>'+ title+ ' </h1><p>'+content+'</p></div>');
 		for (var j=0;j<images.length;j++){
-			$('.content-container').append('<div class="flex-item" id="flex-image"'+ created +'></img></div>');
+
 			$.ajax({
-				method: "GET",				
+				method: "GET",
+				async: false,
 				url: images[j],
 				success: function(data){
-					$('#' +  created + '').append('<img src='+data.Image+'></img>');
+					$('.content-container').append('<div class="flex-item"><img src='+data.Image+'></img></div>');
 				}
 			});
 			

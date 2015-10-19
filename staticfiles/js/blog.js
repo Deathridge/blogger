@@ -31,7 +31,7 @@ $( document ).ready(function() {
 				method: "GET",
 				url: images[j],
 				success: function(data){
-					$('.content-container').append('<div class="flex-item"><img src='+data.url+'></img></div>');
+					$('.content-container').append('<div class="flex-item"><img src='+data.Image+'></img></div>');
 				}
 			})
 			

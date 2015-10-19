@@ -22,7 +22,7 @@ function buildImages(data){
 		var datetime = images[i].datetime;		
 		var url = images[i].url;
 		
-		$('.content-container').append('<div class="flex-item"><img src=url></img></div>');
+		$('.content-container').append('<div class="flex-item"><img src='+url+'></img></div>');
 		$('.content-container').append('<div class="flex-item-seperator"></div>');
 
 	};

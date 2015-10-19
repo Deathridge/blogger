@@ -53,6 +53,7 @@ img {max-width:100%;}
 		
 		flex-basis: auto;
 		max-width: 65%;
+		min-width: 25%;
 	}
 
 	.flex-text{

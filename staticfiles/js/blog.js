@@ -8,7 +8,7 @@ $( document ).ready(function() {
 
 	$.ajax({
 		method: "GET",
-		url: "api.blogger.danielbetteridge.com/post",
+		url: "http://api.blogger.danielbetteridge.com/post",
 		success: function(data){
 			getPosts(data);
 		}

@@ -16,10 +16,10 @@ class Image(models.Model):
 
 class Post(models.Model):
 	Title = models.CharField(max_length=30)
-	Content_Text = models.CharField(max_length=255)
+	Content_Text = models.CharField(max_length=10000)
 	created = models.DateTimeField(editable=False, null=True)
 	modified = models.DateTimeField(null=True)
-	Images = models.ManyToManyField(Image, blank=True,null=True)
+	Images = models.ManyToManyField(Image, blank=True)
 	def save(self, *args, **kwargs):
 		''' On save, update timestamp '''
 		if not self.id:

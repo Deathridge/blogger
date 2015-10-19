@@ -33,11 +33,11 @@ $( document ).ready(function() {
 				success: function(data){
 					$('.content-container').append('<div class="flex-item"><img src='+data.Image+'></img></div>');
 				}
-			})
+			});
 			
 		}
 
-	};
 	}
+	};
 });
 

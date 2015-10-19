@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'blog',
+    'corsheaders',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -48,7 +49,14 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    
 )
+
+CORS_ORIGIN_WHITELIST = (
+        'danielbetteridge.com',
+        'blogger.danielbetteridge.com'
+    )
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,

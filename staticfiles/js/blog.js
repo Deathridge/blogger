@@ -27,15 +27,14 @@ $( document ).ready(function() {
 		$('.content-container').append('<div class="flex-item flex-text"><h1>'+ title+ ' </h1><p>'+content+'</p></div>');
 		$('.content-container').append('<div class=image-container id='+i+'></div>')
 		for (var j=0;j<images.length;j++){
-			var container_id = "#" + i;
-			var image_id = "#" + i + j;
-			$(container_id).append('<div class="flex-item" id='+i+j+'></div>');
+			
 			$.ajax({
-				method: "GET",				
+				method: "GET",
+				async: false,
 				url: images[j],
 				success: function(data){
-					
-					$(image_id).append('<img src='+data.Image+'></img>');
+					var id = "#" + i;
+					$(id).append('<div class="flex-item"><img src='+data.Image+'></img></div>');
 				}
 			});
 			

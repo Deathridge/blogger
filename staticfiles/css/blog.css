@@ -46,6 +46,10 @@ img {max-width:100%;}
 		align-items: center;
 	}
 
+	.image-container img {
+		max-width: 50%;
+	}
+
 	#column-left {
 		order: -1;
 		background-color: #01659F;

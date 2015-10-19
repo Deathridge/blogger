@@ -34,7 +34,7 @@ $( document ).ready(function() {
 				url: images[j],
 				success: function(data){
 					var id = "#" + created;
-					$('#' + created).append('<div class="flex-item"><img src='+data.Image+'></img></div>');
+					$(id).append('<div class="flex-item"><img src='+data.Image+'></img></div>');
 				}
 			});
 			

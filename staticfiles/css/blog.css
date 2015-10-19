@@ -59,15 +59,6 @@ img {max-width:100%;}
 	}
 
 
-
-	
-	.content-container .flex-item img{
-		
-		flex-basis: auto;
-		max-width: 65%;
-		min-width: 25%;
-	}
-
 	.flex-text{
 		
 		flex-basis: auto;

@@ -13,9 +13,8 @@ $( document ).ready(function() {
 			buildPosts(data);
 		}
 	})
-});
 
-function buildPosts(data){
+	function buildPosts(data){
 	posts = data;
 	for (var i=0;i<posts.length;i++){ 
 		var title = posts[i].Title;
@@ -31,4 +30,6 @@ function buildPosts(data){
 		}
 
 	};
-}
+	}
+});
+

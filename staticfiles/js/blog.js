@@ -32,7 +32,8 @@ $( document ).ready(function() {
 				async: false,
 				url: images[j],
 				success: function(data){
-					$('.content-container').append('<div class="flex-item"><img src='+data.Image+'></img></div>');
+					$('.content-container').append('<div class=image-container id='+created+'></div>')
+					$('#' + created +'').append('<div class="flex-item"><img src='+data.Image+'></img></div>');
 				}
 			});
 			

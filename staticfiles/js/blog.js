@@ -33,7 +33,7 @@ $( document ).ready(function() {
 				async: false,
 				url: images[j],
 				success: function(data){
-					
+					var id = "#" + created;
 					$('#' + created).append('<div class="flex-item"><img src='+data.Image+'></img></div>');
 				}
 			});

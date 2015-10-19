@@ -11,10 +11,10 @@ $( document ).ready(function() {
 		success: function(data){
 			buildImages(data);
 		}
-	})
-});
+	});
 
-function buildImages(data){
+
+	function buildImages(data){
 	images = data;
 	for (var i=0;i<images.length;i++){ 
 		var title = images[i].Title;
@@ -22,8 +22,10 @@ function buildImages(data){
 		var datetime = images[i].datetime;		
 		var url = images[i].url;
 		
-		$('.content-container').append('<div class="flex-item"><img src='+url+'></img></div>');
+		$('.content-container').append('<div class="flex-item"><img src='+image+'></img></div>');
 		$('.content-container').append('<div class="flex-item-seperator"></div>');
 
 	};
-}
+	}
+});
+

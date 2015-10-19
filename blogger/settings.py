@@ -58,6 +58,8 @@ CORS_ORIGIN_WHITELIST = (
         'blogger.danielbetteridge.com'
     )
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.

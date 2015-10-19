@@ -114,7 +114,7 @@ img {max-width:100%;}
 
 
 @media screen and (max-width: 800px){
-	.content-container .flex-item img{
+	.image-container .flex-item {
 		
 		flex-basis: auto;
 		max-width: 100%;

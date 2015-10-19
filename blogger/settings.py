@@ -53,12 +53,11 @@ MIDDLEWARE_CLASSES = (
     
 )
 
-#CORS_ORIGIN_WHITELIST = (
-#        'danielbetteridge.com',
-#        'blogger.danielbetteridge.com'
-#    )
+CORS_ORIGIN_WHITELIST = (
+        'danielbetteridge.com',
+        'blogger.danielbetteridge.com'
+    )
 
-CORS_ORIGIN_ALLOW_ALL = True
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,

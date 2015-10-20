@@ -39,7 +39,7 @@ $( document ).ready(function() {
 					
 					$downloadingImage.load(function(){
 						
-						$("#" + $(this).id).attr("src", $(this).attr("src"));
+						$("#" + $(this).attr("id")).attr("src", $(this).attr("src"));
 					});
 					$downloadingImage.attr("id", i + j);
 					$downloadingImage.attr("src", data.Image);

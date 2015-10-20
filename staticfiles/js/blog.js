@@ -42,8 +42,9 @@ $( document ).ready(function() {
 				success: function(data){
 					$(id).append('<div class="flex-item"><img src="'+data.Image+'"></img></div>');
 					console.log(nextImage + " " + id + " " + images.length);
-					while(nextImage++ < images.length){
-						loadImages(nextImage++, id, images)
+					nextImage = nextImage + 1;
+					while(nextImage < images.length){
+						loadImages(nextImage, id, images)
 					}
 					
 				}

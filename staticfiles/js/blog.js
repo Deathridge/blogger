@@ -27,14 +27,18 @@ $( document ).ready(function() {
 		$('.content-container').append('<div class="flex-item flex-text"><h1>'+ title+ ' </h1><p>'+content+'</p></div>');
 		$('.content-container').append('<div class=image-container id='+i+'></div>')
 		for (var j=0;j<images.length;j++){
-			
+			var $image = $(id).append('<div class="flex-item"><img src=""></img></div>');
+			var $downloadingImage = $("<img>");
 			$.ajax({
 				method: "GET",
-				async: false,
+				//async: false,
 				url: images[j],
 				success: function(data){
 					var id = "#" + i;
-					$(id).append('<div class="flex-item"><img src='+data.Image+'></img></div>');
+					$downloadingImage.load(funtion(){
+						$image.attr("src", $(this).attr("src"));
+					});
+					$downloadingImage.attr("src", data.Image);
 				}
 			});
 			

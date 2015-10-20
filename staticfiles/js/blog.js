@@ -31,7 +31,8 @@ $( document ).ready(function() {
 			
 			
 			var image = new Array();
-			image[j] = $(id).append('<div class="flex-item"><img src="" id=' + i+ j +'></img></div>');
+			$(id).append('<div class="flex-item"><img src="" id=' + i+ j +'></img></div>');
+			image[j] = $("#" + i + j);
 			$.ajax({
 				method: "GET",
 				//async: false,

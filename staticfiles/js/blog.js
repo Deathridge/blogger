@@ -16,7 +16,9 @@ $( document ).ready(function() {
 
 	function buildPosts(data){
 	posts = data;
-	for (var i=0;i<posts.length;i++){ 
+	var i=0;
+	var j=0;
+	for (i=0;i<posts.length;i++){ 
 		var title = posts[i].Title;
 		var images = posts[i].Images;
 		var created = posts[i].created;
@@ -26,7 +28,7 @@ $( document ).ready(function() {
 		
 		$('.content-container').append('<div class="flex-item flex-text"><h1>'+ title+ ' </h1><p>'+content+'</p></div>');
 		$('.content-container').append('<div class=image-container id='+i+'></div>')
-		for (var j=0;j<images.length;j++){
+		for (j=0;j<images.length;j++){
 			var id = "#" + i;
 			
 			

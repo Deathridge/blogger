@@ -30,8 +30,8 @@ $( document ).ready(function() {
 			var id = "#" + i;
 			
 			
-			var $image = new Array();
-			$image[j] = $(id).append('<div class="flex-item"><img src="" id=' + i+ j +'></img></div>');
+			var image = new Array();
+			image[j] = $(id).append('<div class="flex-item"><img src="" id=' + i+ j +'></img></div>');
 			$.ajax({
 				method: "GET",
 				//async: false,
@@ -40,7 +40,7 @@ $( document ).ready(function() {
 					
 					var $downloadingImage = $("<img>").attr("src", data.Image).on('load', function(){
 						
-						$image[j].attr("src", $(this).attr("src"));
+						image[j].attr("src", $(this).attr("src"));
 					});					
 					
 				}

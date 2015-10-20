@@ -36,7 +36,7 @@ $( document ).ready(function() {
 	}	
 	};	
 
-	function loadImages(id,images){		
+	function loadImages(id,image){		
 					
 			$.ajax({
 				method: "GET",

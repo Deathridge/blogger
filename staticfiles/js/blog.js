@@ -42,7 +42,7 @@ $( document ).ready(function() {
 				url: images[j],
 				success: function(data){
 					image["" +i+j] = data.Image;
-					updateImages(image);				
+					updateImages(image, posts, images);				
 					console.log(data.Image);
 				}
 			});
@@ -53,7 +53,7 @@ $( document ).ready(function() {
 	
 	};
 
-	function updateImages(image){
+	function updateImages(image, posts, images){
 		for (i=0;i<posts.length;i++){ 
 			for (j=0;j<images.length;j++){
 				$("#" + i + j).attr("src", image[""+i+j]);

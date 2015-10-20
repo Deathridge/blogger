@@ -40,7 +40,7 @@ $( document ).ready(function() {
 				//async: false,
 				url: images[j],
 				success: function(data){
-					image[""+i+j] = data.Image;				
+					image[i+j] = data.Image;				
 				}
 			});
 			

@@ -41,7 +41,7 @@ $( document ).ready(function() {
 						
 						$("#" + $(this).attr("id")).attr("src", $(this).attr("src"));
 					});
-					console.log("" + i + j);
+					console.log(i);
 					$downloadingImage.attr("id", "" + i +"" + j + "");
 					$downloadingImage.attr("src", data.Image);
 				}

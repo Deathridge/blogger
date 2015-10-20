@@ -28,24 +28,22 @@ $( document ).ready(function() {
 		$('.content-container').append('<div class="flex-item flex-text"><h1>'+ title+ ' </h1><p>'+content+'</p></div>');
 		$('.content-container').append('<div class=image-container id='+i+'></div>')	
 		var id = "#" + i;
-		loadImages(0,id,images);	
+		images.forEach(function(image) {
+			loadImages(id, image)
+		});
+		
 		
 	}	
 	};	
 
-	function loadImages(nextImage,id,images){		
+	function loadImages(id,images){		
 					
 			$.ajax({
 				method: "GET",
 				//async: false,
-				url: images[nextImage],
+				url: image,
 				success: function(data){
-					$(id).append('<div class="flex-item"><img src="'+data.Image+'"></img></div>');
-					console.log(nextImage + " " + id + " " + images.length);
-					var nextImageup = nextImage + 1;
-					while(nextImageup < images.length){
-						loadImages(nextImageup, id, images)
-					}
+					$(id).append('<div class="flex-item"><img src="'+data.Image+'"></img></div>');				
 					
 				}
 			});

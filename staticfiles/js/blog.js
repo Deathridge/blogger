@@ -47,7 +47,11 @@ $( document ).ready(function() {
 		}
 
 	}
-	$("#" + i + j).attr("src", image[""+i+j]);
+	for (i=0;i<posts.length;i++){ 
+		for (j=0;j<images.length;j++){
+			$("#" + i + j).attr("src", image[i+j]);
+		}
+	}
 	};
 });
 

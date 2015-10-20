@@ -34,21 +34,16 @@ $( document ).ready(function() {
 			
 			var image = new Array();
 			$(id).append('<div class="flex-item"><img src="" id=' + i+ j +'></img></div>');
-			image[j] = $("#" + i + j);
+			
 			$.ajax({
 				method: "GET",
 				//async: false,
 				url: images[j],
 				success: function(data){
-					
-					var $downloadingImage = $("<img>").attr("src", data.Image).on('load', function(){
-						
-						image[j].attr("src", $(this).attr("src"));
-					});					
-					
+					image[j] = data.Image;				
 				}
 			});
-			
+			$("#" + i + j).attr("src", image[j]);			
 		}
 
 	}

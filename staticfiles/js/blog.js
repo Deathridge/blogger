@@ -41,6 +41,7 @@ $( document ).ready(function() {
 				url: images[j],
 				success: function(data){
 					image[i+j] = data.Image;				
+					console.log(data.Image);
 				}
 			});
 			

@@ -38,7 +38,7 @@ $( document ).ready(function() {
 			$.ajax({
 				method: "GET",
 				//async: false,
-				url: images[j],
+				url: images[nextImage],
 				success: function(data){
 					$(id).append('<div class="flex-item"><img src="'+data.Image+'"></img></div>');
 					while(nextImage++ < images.length){

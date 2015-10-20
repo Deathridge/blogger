@@ -40,13 +40,14 @@ $( document ).ready(function() {
 				//async: false,
 				url: images[j],
 				success: function(data){
-					image[j] = data.Image;				
+					image[""+i+j] = data.Image;				
 				}
 			});
-			$("#" + i + j).attr("src", image[j]);			
+			
 		}
 
 	}
+	$("#" + i + j).attr("src", image[""+i+j]);
 	};
 });
 

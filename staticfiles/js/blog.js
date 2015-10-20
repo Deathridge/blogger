@@ -29,7 +29,7 @@ $( document ).ready(function() {
 		for (var j=0;j<images.length;j++){
 			var id = "#" + i;
 			$(id).append('<div class="flex-item"><img src="" id=' + i+ j +'></img></div>');
-			var $image = $("#" + i + j);
+			
 			var $downloadingImage = $("<img>");
 			$.ajax({
 				method: "GET",
@@ -38,8 +38,10 @@ $( document ).ready(function() {
 				success: function(data){
 					
 					$downloadingImage.load(function(){
-						$image.attr("src", $(this).attr("src"));
+						
+						$("#" + $(this).id).attr("src", $(this).attr("src"));
 					});
+					$downloadingImage.attr("id", i + j);
 					$downloadingImage.attr("src", data.Image);
 				}
 			});

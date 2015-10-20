@@ -35,7 +35,7 @@ $( document ).ready(function() {
 				url: images[j],
 				success: function(data){
 					var id = "#" + i;
-					$downloadingImage.load(funtion(){
+					$downloadingImage.load(function(){
 						$image.attr("src", $(this).attr("src"));
 					});
 					$downloadingImage.attr("src", data.Image);

@@ -28,10 +28,10 @@ $( document ).ready(function() {
 		$('.content-container').append('<div class=image-container id='+i+'></div>')
 		for (var j=0;j<images.length;j++){
 			var id = "#" + i;
-			$(id).append('<div class="flex-item"><img src="" id=' + i+ j +'></img></div>');
+			
 			
 			var $image = new Array();
-			$image[j] = $("#" + i + j);
+			$image[j] = $(id).append('<div class="flex-item"><img src="" id=' + i+ j +'></img></div>');
 			$.ajax({
 				method: "GET",
 				//async: false,

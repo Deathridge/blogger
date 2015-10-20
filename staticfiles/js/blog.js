@@ -18,6 +18,7 @@ $( document ).ready(function() {
 	posts = data;
 	var i=0;
 	var j=0;
+	var image = new Array();
 	for (i=0;i<posts.length;i++){ 
 		var title = posts[i].Title;
 		var images = posts[i].Images;
@@ -32,7 +33,7 @@ $( document ).ready(function() {
 			var id = "#" + i;
 			
 			
-			var image = new Array();
+			
 			$(id).append('<div class="flex-item"><img src="" id=' + i+ j +'></img></div>');
 			
 			$.ajax({

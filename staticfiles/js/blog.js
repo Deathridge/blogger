@@ -30,21 +30,21 @@ $( document ).ready(function() {
 			var id = "#" + i;
 			$(id).append('<div class="flex-item"><img src="" id=' + i+ j +'></img></div>');
 			
-			var $downloadingImage = $("<img>");
-			$downloadingImage.attr("id", "" + i +"" + j + "");
+			var $downloadingImage[j] = $("<img>");
+			$downloadingImage[j].attr("id", "" + i +"" + j + "");
 			$.ajax({
 				method: "GET",
 				//async: false,
 				url: images[j],
 				success: function(data){
 					
-					$downloadingImage.load(function(){
+					$downloadingImage[j].load(function(){
 						
 						$("#" + $(this).attr("id")).attr("src", $(this).attr("src"));
 					});
 
 					
-					$downloadingImage.attr("src", data.Image);
+					$downloadingImage[j].attr("src", data.Image);
 				}
 			});
 			

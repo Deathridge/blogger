@@ -28,12 +28,12 @@ $( document ).ready(function() {
 		$('.content-container').append('<div class="flex-item flex-text"><h1>'+ title+ ' </h1><p>'+content+'</p></div>');
 		$('.content-container').append('<div class=image-container id='+i+'></div>')	
 		var id = "#" + i;
-		loadImages(0,id);	
+		loadImages(0,id,images);	
 		
 	}	
 	};	
 
-	function loadImages(nextImage,id){		
+	function loadImages(nextImage,id,images){		
 					
 			$.ajax({
 				method: "GET",
@@ -42,7 +42,7 @@ $( document ).ready(function() {
 				success: function(data){
 					$(id).append('<div class="flex-item"><img src="'+data.Image+'"></img></div>');
 					while(nextImage++ < images.length){
-						loadImages(nextImage++, id)
+						loadImages(nextImage++, id, images)
 					}
 					
 				}

@@ -46,7 +46,7 @@ $( document ).ready(function() {
 					
 			$.ajax({
 				method: "GET",
-				//async: false,
+				async: false,
 				url: images[j],
 				success: function(data){
 					$(id).append('<div class="flex-item"><img src="'+data.Image+'"></img></div>');

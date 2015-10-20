@@ -28,8 +28,8 @@ $( document ).ready(function() {
 		$('.content-container').append('<div class=image-container id='+i+'></div>')
 		for (var j=0;j<images.length;j++){
 			var id = "#" + i;
-			var $imageflex = $(id).append('<div class="flex-item"></div>');
-			var $image = $imageflex.append('<img src=""></img>');
+			$(id).append('<div class="flex-item"><img src="" id=' + i+ j +'></img></div>');
+			var $image = $("#" + i + j);
 			var $downloadingImage = $("<img>");
 			$.ajax({
 				method: "GET",

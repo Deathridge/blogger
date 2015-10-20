@@ -41,7 +41,8 @@ $( document ).ready(function() {
 				//async: false,
 				url: images[j],
 				success: function(data){
-					image[i+j] = data.Image;				
+					image["" +i+j] = data.Image;
+					updateImages(image);				
 					console.log(data.Image);
 				}
 			});
@@ -49,11 +50,18 @@ $( document ).ready(function() {
 		}
 
 	}
-	for (i=0;i<posts.length;i++){ 
-		for (j=0;j<images.length;j++){
-			$("#" + i + j).attr("src", image[i+j]);
-		}
-	}
+	
 	};
+
+	function updateImages(image){
+		for (i=0;i<posts.length;i++){ 
+			for (j=0;j<images.length;j++){
+				$("#" + i + j).attr("src", image[""+i+j]);
+			}
+		}	
+	}
+
+
+
 });
 

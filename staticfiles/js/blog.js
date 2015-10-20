@@ -31,6 +31,7 @@ $( document ).ready(function() {
 			$(id).append('<div class="flex-item"><img src="" id=' + i+ j +'></img></div>');
 			
 			var $downloadingImage = $("<img>");
+			console.log(i);
 			$.ajax({
 				method: "GET",
 				//async: false,
@@ -41,7 +42,7 @@ $( document ).ready(function() {
 						
 						$("#" + $(this).attr("id")).attr("src", $(this).attr("src"));
 					});
-					console.log(i);
+
 					$downloadingImage.attr("id", "" + i +"" + j + "");
 					$downloadingImage.attr("src", data.Image);
 				}

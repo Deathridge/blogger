@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from blog.serializers import ImageSerializer, PostSerializer, UserSerializer
+from blog.serializers import ImageSerializer, PostSerializer, UserSerializer, LocationSerializer
 from blog.models import Image, Post, Location
 from django.contrib.auth.models import User
 # Create your views here.

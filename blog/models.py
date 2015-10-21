@@ -27,3 +27,7 @@ class Post(models.Model):
 		self.modified = timezone.now()
 		return super(Post, self).save(*args, **kwargs)
 
+class Location(models.Model):
+	Latitude = models.DecimalField(max_digits=12,decimal_places=10, blank=True,null=True)
+	Longitude = models.DecimalField(max_digits=12,decimal_places=10, blank=True,null=True)
+	Landmark = models.CharField(max_length=255)

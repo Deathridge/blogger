@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from rest_framework import routers, serializers, viewsets
-from blog.views import ImageViewSet, UserViewSet, PostViewSet
+from blog.views import ImageViewSet, UserViewSet, PostViewSet, LocationViewSet
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -11,6 +11,7 @@ router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'images', ImageViewSet)
 router.register(r'posts', PostViewSet)
+router.register(r'locations', LocationViewSet)
 
 urlpatterns = patterns('',
     # Examples:

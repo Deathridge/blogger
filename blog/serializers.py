@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from blog.models import Image, Post
+from blog.models import Image, Post,Location
 from django.contrib.auth.models import User
 
 class ImageSerializer(serializers.HyperlinkedModelSerializer):
@@ -16,3 +16,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ('url', 'username', 'email', 'is_staff')
+
+class LocationSerializer(serializers.HyperlinkedModelSerializer):
+	class Meta:
+		model = Location

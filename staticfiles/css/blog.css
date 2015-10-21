@@ -123,10 +123,10 @@ img {max-width:100%;}
 	.flex-text{
 		
 		flex-basis: auto;
-		max-width: 95%;
+		max-width: 90%;
 	}
 
-	p { word-break: break-all }
+	
 
 	
 }

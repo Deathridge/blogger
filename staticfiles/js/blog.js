@@ -67,7 +67,7 @@ $( document ).ready(function() {
 
 					var map = L.map('abs-map-'+i)
 						.addLayer(mapboxTiles)
-						.setView([data.Latitude, data.Longitude], 15);
+						.setView([data.Latitude, data.Longitude], data.Zoom);
 				}
 		});
 	};

@@ -75,10 +75,14 @@ img {max-width:100%;}
 		position: absolute;
 		top:0px;
 		bottom: 0px;
+		left:0px;
+		right:0px;
 		width:100%;
 	}
 
-	
+	.flex-map{
+		position: relative;
+	}
 
 	.flex-menu {		
 		-moz-box-shadow:     2px 2px 20px #000000;

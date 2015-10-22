@@ -24,7 +24,7 @@ $( document ).ready(function() {
 		var modified = posts[i].modified;
 		var content = posts[i].Content_Text;		
 		var url = posts[i].url;
-		var location = posts[i].location;
+		var location = posts[i].Location;
 		
 		$('.content-container').append('<div class="flex-item flex-text"><h1>'+ title+ ' </h1><p>'+content+'</p></div>');
 		$('.content-container').append('<div class=image-container id='+i+'></div>')	

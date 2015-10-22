@@ -12,7 +12,11 @@ class Image(models.Model):
 	Title = models.CharField(max_length=30)
 	datetime = models.DateTimeField(auto_now_add=True)
 	Image = models.ImageField(upload_to=get_image_path, blank=True, null=True)
-	
+
+class Location(models.Model):
+	Latitude = models.DecimalField(max_digits=12,decimal_places=10, blank=True,null=True)
+	Longitude = models.DecimalField(max_digits=12,decimal_places=10, blank=True,null=True)
+	Landmark = models.CharField(max_length=255)
 
 class Post(models.Model):
 	Title = models.CharField(max_length=30)
@@ -20,6 +24,7 @@ class Post(models.Model):
 	created = models.DateTimeField(editable=False, null=True)
 	modified = models.DateTimeField(null=True)
 	Images = models.ManyToManyField(Image, blank=True)
+	Location = models.ForeignKey(Location,blank=True, null=True)
 	def save(self, *args, **kwargs):
 		''' On save, update timestamp '''
 		if not self.id:
@@ -27,7 +32,3 @@ class Post(models.Model):
 		self.modified = timezone.now()
 		return super(Post, self).save(*args, **kwargs)
 
-class Location(models.Model):
-	Latitude = models.DecimalField(max_digits=12,decimal_places=10, blank=True,null=True)
-	Longitude = models.DecimalField(max_digits=12,decimal_places=10, blank=True,null=True)
-	Landmark = models.CharField(max_length=255)

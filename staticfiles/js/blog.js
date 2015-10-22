@@ -24,14 +24,17 @@ $( document ).ready(function() {
 		var modified = posts[i].modified;
 		var content = posts[i].Content_Text;		
 		var url = posts[i].url;
+		var location = posts[i].location;
 		
 		$('.content-container').append('<div class="flex-item flex-text"><h1>'+ title+ ' </h1><p>'+content+'</p></div>');
 		$('.content-container').append('<div class=image-container id='+i+'></div>')	
+		$('.content-container').append('<div class="flex-item flex-map" id="map'+i+'"></div>')
 		var id = "#" + i;
 		images.forEach(function(image) {
 			loadImages(id, image)
 		});
 		
+		loadMap(i);
 		
 	}	
 	};	
@@ -49,6 +52,17 @@ $( document ).ready(function() {
 			});
 			
 	};
+
+	function loadMap(i) {
+		L.mapbox.accessToken = 'pk.eyJ1IjoiZGFuaWVsYmV0dGVyaWRnZSIsImEiOiJjaWY3bjZqazcwc3IzczdrcmU1NjJ1czdnIn0.Xr0sZHMxs6Fvp7lzmmtJSg';
+		var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+    		attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+		});
+
+		var map = L.map('map'+i)
+			.addLayer(mapboxTiles)
+			.setView([location.latitude, location.longitude], 15);
+	}
 
 });
 

@@ -61,7 +61,7 @@ $( document ).ready(function() {
 
 		var map = L.map('map'+i)
 			.addLayer(mapboxTiles)
-			.setView([location.latitude, location.longitude], 15);
+			.setView([location.Latitude, location.Longitude], 15);
 	}
 
 });

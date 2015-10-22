@@ -15,7 +15,7 @@ body {
   	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 	flex-direction: column;
-	text-align: center;
+	text-align: left;
 
 }	
 
@@ -79,6 +79,7 @@ img {max-width:100%;}
 
 	.content-container .flex-map {
 		max-width:33.333%;
+		max-height: 33.333%;
 	}
 	
 
@@ -131,6 +132,7 @@ img {max-width:100%;}
 		
 		flex-basis: auto;
 		max-width: 90%;
+		
 	}
 
 	

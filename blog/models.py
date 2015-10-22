@@ -21,7 +21,7 @@ class Location(models.Model):
 
 class Post(models.Model):
 	Title = models.CharField(max_length=30)
-	Content_Text = models.CharField(max_length=10000)
+	Content_Text = models.TextField()
 	created = models.DateTimeField(editable=False, null=True)
 	modified = models.DateTimeField(null=True)
 	Images = models.ManyToManyField(Image, blank=True)

@@ -65,7 +65,7 @@ $( document ).ready(function() {
     					attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
 					});
 
-					var map = L.map('abs-map'+i)
+					var map = L.map('abs-map-'+i)
 						.addLayer(mapboxTiles)
 						.setView([data.Latitude, data.Longitude], 15);
 				}

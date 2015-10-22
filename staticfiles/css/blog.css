@@ -73,8 +73,7 @@ img {max-width:100%;}
 
 	.abs-map {
 		position: absolute;
-		top:0px;	
-		bottom: 0px;
+		height:100%;
 		width: 100%;	
 	}
 

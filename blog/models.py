@@ -17,7 +17,9 @@ class Location(models.Model):
 	Latitude = models.DecimalField(max_digits=12,decimal_places=10, blank=True,null=True)
 	Longitude = models.DecimalField(max_digits=12,decimal_places=10, blank=True,null=True)
 	Zoom = models.DecimalField(max_digits=2, decimal_places=0, blank=True, null=True)
-	Landmark = models.CharField(max_length=255)
+	Landmark = models.CharField(max_length=255, blank=True, null=True)
+	LandmarkDescription = models.CharField(max_length=1000, blank=True, null=True)
+	LocationType = models.CharField(max_length=255, blank=True, null=True)
 
 class Post(models.Model):
 	Title = models.CharField(max_length=30)

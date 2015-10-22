@@ -1,11 +1,12 @@
 
 $( document ).ready(function() {
+	//Loads images page on menu click
 	$('#flex-menu-3').click(function(){
 		window.location.href = "../templates/images.html";
 	});
 
 
-
+	//loads all posts to the page when page loads
 	$.ajax({
 		method: "GET",
 		url: "http://api.blogger.danielbetteridge.com/posts?format=json",
@@ -15,6 +16,7 @@ $( document ).ready(function() {
 		}
 	})
 
+	//Builds complete post including images and map
 	function buildPosts(data){
 	posts = data;
 	for (var i=0;i<posts.length;i++){ 
@@ -39,6 +41,7 @@ $( document ).ready(function() {
 	}	
 	};	
 
+	//loads image into html when provided by higher function
 	function loadImages(id,image){		
 					
 			$.ajax({
@@ -53,6 +56,7 @@ $( document ).ready(function() {
 			
 	};
 
+	//Loads map to html element with id of abs-map-i and uses coordinates, name and zoom level set in location
 	function loadMap(i, location) {
 
 		$.ajax({
@@ -68,8 +72,38 @@ $( document ).ready(function() {
 					var map = L.map('abs-map-'+i)
 						.addLayer(mapboxTiles)
 						.setView([data.Latitude, data.Longitude], data.Zoom);
+
+					L.mapbox.featureLayer({
+    				// this feature is in the GeoJSON format: see geojson.org
+    				// for the full specification
+    				type: 'Feature',
+    				geometry: {
+        				type: 'Point',
+        				// coordinates here are in longitude, latitude order because
+        				// x, y is the standard for GeoJSON and many formats
+        				coordinates: [
+          				data.Longitude,
+          				data.Latitude 
+        				]
+    				},
+    				properties: {
+        				title: data.Landmark,
+        				description: data.LandmarkDescription,
+        				// one can customize markers by adding simplestyle properties
+        				// https://www.mapbox.com/guides/an-open-platform/#simplestyle
+        				'marker-size': 'large',
+        				'marker-color': '#BE9A6B',
+        				'marker-symbol': data.LocationType
+    				}
+					}).addTo(map);
 				}
 		});
+	};
+
+
+	//Image scrolling viewer
+	function imageViewer(){
+
 	};
 
 });

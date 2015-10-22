@@ -73,12 +73,13 @@ img {max-width:100%;}
 
 	.abs-map {
 		position: absolute;
-		top:0px;
-		bottom: 0px;
-		width:33%;
+		top:0px;		
 	}
 
-	
+	.flex-map{
+		position: relative;
+		max-width: 33.333%;
+	}
 
 	.flex-menu {		
 		-moz-box-shadow:     2px 2px 20px #000000;

@@ -28,7 +28,7 @@ $( document ).ready(function() {
 		
 		$('.content-container').append('<div class="flex-item flex-text"><h1>'+ title+ ' </h1><p>'+content+'</p></div>');
 		$('.content-container').append('<div class=image-container id='+i+'></div>')	
-		$('.content-container').append('<div class="flex-item flex-map" id="map'+i+'"></div>')
+		$('.content-container').append('<div class="flex-item flex-map" id="map'+i+'"><div class="abs-map" id="abs-map-'+i+'"></div></div>')
 		var id = "#" + i;
 		images.forEach(function(image) {
 			loadImages(id, image)
@@ -65,7 +65,7 @@ $( document ).ready(function() {
     					attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
 					});
 
-					var map = L.map('map'+i)
+					var map = L.map('abs-map'+i)
 						.addLayer(mapboxTiles)
 						.setView([data.Latitude, data.Longitude], 15);
 				}

@@ -71,8 +71,11 @@ img {max-width:100%;}
 		margin: 0 auto;
 	}
 
-	.flex-map {
+	.abs-map {
 		position: absolute;
+		top:0px;
+		bottom: 0px;
+		width:100%;
 	}
 
 	

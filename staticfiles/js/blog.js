@@ -54,15 +54,23 @@ $( document ).ready(function() {
 	};
 
 	function loadMap(i, location) {
-		L.mapbox.accessToken = 'pk.eyJ1IjoiZGFuaWVsYmV0dGVyaWRnZSIsImEiOiJjaWY3bjZqazcwc3IzczdrcmU1NjJ1czdnIn0.Xr0sZHMxs6Fvp7lzmmtJSg';
-		var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
-    		attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
-		});
 
-		var map = L.map('map'+i)
-			.addLayer(mapboxTiles)
-			.setView([location.Latitude, location.Longitude], 15);
-	}
+		$.ajax({
+				method: "GET",
+				//async: false,
+				url: location,
+				success: function(data){
+					L.mapbox.accessToken = 'pk.eyJ1IjoiZGFuaWVsYmV0dGVyaWRnZSIsImEiOiJjaWY3bjZqazcwc3IzczdrcmU1NjJ1czdnIn0.Xr0sZHMxs6Fvp7lzmmtJSg';
+					var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+    					attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+					});
+
+					var map = L.map('map'+i)
+						.addLayer(mapboxTiles)
+						.setView([data.Latitude, data.Longitude], 15);
+				}
+		});
+	};
 
 });
 

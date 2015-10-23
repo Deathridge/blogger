@@ -4,6 +4,9 @@ $( document ).ready(function() {
 		window.location.href = "../templates/blog.html";
 	});
 
+	$('#flex-menu-3').click(function(){
+		window.location.href = "../templates/images.html";
+	});
 
 	$.ajax({
 		method: "GET",

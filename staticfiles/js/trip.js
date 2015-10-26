@@ -14,7 +14,7 @@ $( document ).ready(function() {
 		url: "http://api.blogger.danielbetteridge.com/posts?format=json",
 		success: function(data){
 			posts = data;
-			posts.forEach(function(post){
+			async.each(posts, function(post, buildGeoJSON){
 				var location = post.Location;
 				$.ajax({
 				method: "GET",
@@ -24,11 +24,21 @@ $( document ).ready(function() {
 					geojson = buildGeoJSON(data);
 					
 				}
-				});
+				}, function(err){
+					if( err ) {
+      					// One of the iterations produced an error.
+      					// All processing will now stop.
+      					console.log('A file failed to process');
+    				} else {
+      					loadMap(geojson);
+    				}				
+				}
+
+				);
 				
 			});	
 			
-			loadMap(geojson);
+			
 
 		}
 	});

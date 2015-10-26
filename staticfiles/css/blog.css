@@ -22,7 +22,11 @@ body {
 
 }	
 
-img {max-width:100%;}
+img {
+
+	max-width:100%;
+	-ms-interpolation-mode: bicubic;
+}
 	.flex-container {		
 		-webkit-box-flex: 1;		
 		-webkit-flex: 1;		

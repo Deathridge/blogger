@@ -26,7 +26,7 @@ img {max-width:100%;}
 	.flex-container {		
 		-webkit-box-flex: 1;		
 		-webkit-flex: 1;		
-		    -ms-flex: 1;		
+		    -ms-flex: 1 0 0;		
 		        flex: 1;
 	}
 
@@ -40,7 +40,7 @@ img {max-width:100%;}
 		        flex-flow: column;
 		-webkit-box-flex: 1;
 		-webkit-flex: 1;
-		    -ms-flex: 1;
+		    -ms-flex: 1 0 0;
 		        flex: 1;
 		
 	}

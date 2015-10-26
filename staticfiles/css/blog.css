@@ -22,11 +22,7 @@ body {
 
 }	
 
-img {
-
-	max-width:100%;
-	-ms-interpolation-mode: bicubic;
-}
+img {max-width:100%;}
 	.flex-container {		
 		-webkit-box-flex: 1;		
 		-webkit-flex: 1;		
@@ -64,7 +60,8 @@ img {
 		    flex-flow: row wrap;
 		-webkit-flex-flow: row wrap;
 		-webkit-justify-content:  space-around;
-		justify-content:  space-around;		
+		    -ms-flex-pack:  distribute;
+		        justify-content:  space-around;		
 		-webkit-box-align: center;		
 		-webkit-align-items: center;		
 		    -ms-flex-align: center;		
@@ -75,10 +72,6 @@ img {
 		-webkit-flex-basis: auto;
 		    -ms-flex-preferred-size: auto;
 		        flex-basis: auto;
-		
-	}
-
-	.image-container .flex-item img{
 		max-width: 33.333%;
 	}
 

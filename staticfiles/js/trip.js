@@ -14,7 +14,7 @@ $( document ).ready(function() {
 		url: "http://api.blogger.danielbetteridge.com/posts?format=json",
 		success: function(data){
 			posts = data;
-			geojson = posts.forEach(function(post){
+			posts.forEach(function(post){
 				var location = post.Location;
 				$.ajax({
 				method: "GET",
@@ -22,10 +22,9 @@ $( document ).ready(function() {
 				url: location,
 				success: function(data){
 					geojson = buildGeoJSON(data);
-					
+					return geojson;
 				}
 				});
-		
 			});	
 			loadMap(geojson);
 		}
@@ -48,7 +47,7 @@ $( document ).ready(function() {
 
 					var map = L.map('abs-map-0')
 						.addLayer(mapboxTiles)
-						.setView([39.50, -98.35], 5);
+						.setView([39.50, -98.35], 3);
 
 					L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map);
 				

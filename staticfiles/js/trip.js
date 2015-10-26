@@ -14,7 +14,7 @@ $( document ).ready(function() {
 		url: "http://api.blogger.danielbetteridge.com/posts?format=json",
 		success: function(data){
 			posts = data;
-			async.each(posts, function(post, buildGeoJSON){
+			async.each(posts, function(post, callback){
 				var location = post.Location;
 				$.ajax({
 				method: "GET",
@@ -22,7 +22,7 @@ $( document ).ready(function() {
 				url: location,
 				success: function(data){
 					geojson = buildGeoJSON(data);
-					
+					callback();					
 				}
 				}, function(err){
 					if( err ) {

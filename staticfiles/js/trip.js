@@ -20,14 +20,18 @@ $( document ).ready(function() {
 				method: "GET",
 				//async: false,
 				url: location,
-				success: geojson = function(data){
+				success: function(data){
 					geojson = buildGeoJSON(data);
-					return geojson;
+					
 				}
 				});
-				return geojson;
+				
 			});	
-			loadMap(geojson);
+			var count = 0;
+			while(geojson = [] || count < 5){
+				loadMap(geojson);
+				count++;
+			}
 		}
 	});
 

@@ -11,11 +11,11 @@ $( document ).ready(function() {
 	var geojson =[];
 	$.ajax({
 		method: "GET",
-		url: "http://api.blogger.danielbetteridge.com/posts?format=json",
+		url: "http://api.blogger.danielbetteridge.com/locations?format=json",
 		success: function(data){
-			posts = data;
-			async.each(posts, function(post, callback){
-				var location = post.Location;
+			locations = data;
+			async.each(locations, function(location, callback){
+				
 				$.ajax({
 				method: "GET",
 				//async: false,

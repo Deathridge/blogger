@@ -33,9 +33,7 @@ $( document ).ready(function() {
     				} else {
       					loadMap(geojson);
     				}				
-				}
-				
-			});	
+				});	
 			
 			
 

@@ -28,8 +28,8 @@ $( document ).ready(function() {
 				
 			});	
 			var count = 0;
-			while(geojson === [] && count < 50){				
-				count++;
+			while(geojson === []){				
+				
 			}
 			loadMap(geojson);
 		}

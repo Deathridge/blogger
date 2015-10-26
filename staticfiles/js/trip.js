@@ -8,9 +8,9 @@ $( document ).ready(function() {
 	$('#flex-menu-2').click(function(){
 		window.location.href = "../templates/blog.html";
 	});
-
-	function getLocations(){
 	var geojson =[];
+	function getLocations(){
+	
 	$.ajax({
 		method: "GET",
 		url: "http://api.blogger.danielbetteridge.com/locations?format=json",

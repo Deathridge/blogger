@@ -23,7 +23,7 @@ $( document ).ready(function() {
 				success: function(data){
 					geojson = buildGeoJSON(data);
 					callback();					
-				}
+				});
 				}, function(err){
 					if( err ) {
       					// One of the iterations produced an error.
@@ -33,8 +33,6 @@ $( document ).ready(function() {
       					loadMap(geojson);
     				}				
 				}
-
-				);
 				
 			});	
 			

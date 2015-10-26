@@ -8,6 +8,9 @@ $( document ).ready(function() {
 		window.location.href = "../templates/images.html";
 	});
 
+	$('#flex-menu-1').click(function(){
+		window.location.href = "../templates/trip.html";
+	});
 	$.ajax({
 		method: "GET",
 		url: "http://api.blogger.danielbetteridge.com/images?format=json",

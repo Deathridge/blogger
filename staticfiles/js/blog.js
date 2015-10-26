@@ -9,6 +9,10 @@ $( document ).ready(function() {
 		window.location.href = "../templates/blog.html";
 	});
 
+	$('#flex-menu-1').click(function(){
+		window.location.href = "../templates/trip.html";
+	});
+
 	//loads all posts to the page when page loads
 	$.ajax({
 		method: "GET",

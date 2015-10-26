@@ -27,9 +27,9 @@ $( document ).ready(function() {
 				});
 				
 			});	
-			geojson.done(
+			
 			loadMap(geojson);
-			);
+
 		}
 	});
 

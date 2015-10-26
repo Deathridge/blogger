@@ -25,6 +25,7 @@ $( document ).ready(function() {
 					return geojson;
 				}
 				});
+				return geojson;
 			});	
 			loadMap(geojson);
 		}

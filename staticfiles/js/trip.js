@@ -28,7 +28,7 @@ $( document ).ready(function() {
 				
 			});	
 			var count = 0;
-			while(geojson === []){				
+			while(geojson.length === 0){				
 				
 			}
 			loadMap(geojson);

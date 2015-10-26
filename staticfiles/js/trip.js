@@ -22,10 +22,10 @@ $( document ).ready(function() {
 				url: location,
 				success: function(data){
 					geojson = buildGeoJSON(data);
-					return geojson;
+					
 				}
 				});
-				return geojson;
+		
 			});	
 			loadMap(geojson);
 		}

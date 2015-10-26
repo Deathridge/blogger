@@ -27,7 +27,12 @@ img {max-width:100%;}
 		-webkit-box-flex: 1;		
 		-webkit-flex: 1;		
 		    -ms-flex: 1 0 0;		
-		        flex: 1;
+		        flex: 1 0 0;
+		@-moz-document url-prefix() {
+ 			
+      		flex: 1;
+    		
+		}
 	}
 
 	.content-container {
@@ -41,7 +46,7 @@ img {max-width:100%;}
 		-webkit-box-flex: 1;
 		-webkit-flex: 1;
 		    -ms-flex: 1 0 0;
-		        flex: 1;
+		        flex: 1 0 0;
 		
 	}
 

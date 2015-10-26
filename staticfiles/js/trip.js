@@ -21,17 +21,19 @@ $( document ).ready(function() {
 				//async: false,
 				url: location,
 				success: function(data){
-					buildGeoJSON(data);
+					geojson = buildGeoJSON(data);
 				}
 				});
 			});	
+			loadMap(geojson);
 		}
 	});
 
 
 	function buildGeoJSON(location) {
 		geojson.push({type: location.LocationType, geometry: { type: "Point", coordinates: [location.Longitude, location.Latitude]}});
-	}
+		return geojson;
+	};
 	//Loads map to html element with id of abs-map-i and uses coordinates, name and zoom level set in location
 	function loadMap(geojson) {
 

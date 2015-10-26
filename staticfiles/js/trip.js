@@ -27,11 +27,9 @@ $( document ).ready(function() {
 				});
 				
 			});	
-			var count = 0;
-			while(geojson.length === 0){				
-				
-			}
+			geojson.done(
 			loadMap(geojson);
+			);
 		}
 	});
 

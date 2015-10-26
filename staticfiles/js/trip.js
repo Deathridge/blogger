@@ -46,7 +46,7 @@ $( document ).ready(function() {
 
 					var map = L.map('abs-map-0')
 						.addLayer(mapboxTiles)
-						.setView([data.Latitude, data.Longitude], 10);
+						.setView([39.50, -98.35], 10);
 
 					L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map);
 				

@@ -20,7 +20,7 @@ $( document ).ready(function() {
 				
 					geojson = buildGeoJSON(location);	
       					
-    		}
+    		});
 		}
 	});
 	loadMap(geojson);

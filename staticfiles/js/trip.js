@@ -9,24 +9,34 @@ $( document ).ready(function() {
 		window.location.href = "../templates/blog.html";
 	});
 	var geojson =[];
-	function getLocations(){
-	
 	$.ajax({
 		method: "GET",
 		url: "http://api.blogger.danielbetteridge.com/locations?format=json",
 		success: function(data){
 			locations = data;
-			locations.forEach(function(location){
+			async.each(locations, function(location, callback){
 				
-					geojson = buildGeoJSON(location);	
-      					
-    		});
+				$.ajax({
+				method: "GET",
+				//async: false,
+				url: location.url,
+				success: function(data){
+					geojson = buildGeoJSON(data);
+					callback();					
+				}
+				});
+				}, function(err){
+					if( err ) {
+      					// One of the iterations produced an error.
+      					// All processing will now stop.
+      					console.log('A file failed to process');
+    				} else {
+      					loadMap(geojson);
+    				}				
+				});	
 		}
 	});
-	loadMap(geojson);
-	};
 
-	getLocations();
 
 	function buildGeoJSON(location) {
 		geojson.push({type: location.LocationType, geometry: { type: "Point", coordinates: [location.Longitude, location.Latitude]}});

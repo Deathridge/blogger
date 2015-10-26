@@ -60,8 +60,7 @@ img {max-width:100%;}
 		    flex-flow: row wrap;
 		-webkit-flex-flow: row wrap;
 		-webkit-justify-content:  space-around;
-		    -ms-flex-pack:  distribute;
-		        justify-content:  space-around;		
+		justify-content:  space-around;		
 		-webkit-box-align: center;		
 		-webkit-align-items: center;		
 		    -ms-flex-align: center;		

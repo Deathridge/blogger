@@ -20,7 +20,7 @@ $( document ).ready(function() {
 				method: "GET",
 				//async: false,
 				url: location,
-				success: function(data){
+				success: geojson = function(data){
 					geojson = buildGeoJSON(data);
 					return geojson;
 				}

@@ -29,6 +29,7 @@ class Post(models.Model):
 	modified = models.DateTimeField(null=True)
 	Images = models.ManyToManyField(Image, blank=True)
 	Location = models.ForeignKey(Location,blank=True, null=True)
+	
 	def save(self, *args, **kwargs):
 		''' On save, update timestamp '''
 		if not self.id:

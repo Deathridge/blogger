@@ -20,6 +20,7 @@ class Location(models.Model):
 	Landmark = models.CharField(max_length=255, blank=True, null=True)
 	LandmarkDescription = models.CharField(max_length=1000, blank=True, null=True)
 	LocationType = models.CharField(max_length=255, blank=True, null=True)
+	LocationTypeGeoJSON = models.CharField(max_length=255, blank=True, null=True)
 
 class Post(models.Model):
 	Title = models.CharField(max_length=30)

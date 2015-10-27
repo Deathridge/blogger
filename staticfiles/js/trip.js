@@ -62,7 +62,7 @@ $( document ).ready(function() {
 					var polyline = L.polyline([]).addTo(map);
 					geojson.forEach(function addPoint(geo){
 						polyline.addLatLng(
-        					L.latLng(geo.geometry.coordinates[0], geo.geometry.coordinates[1]));
+        					L.latLng(geo.geometry.coordinates[1], geo.geometry.coordinates[0]));
 					});
 		
 	};

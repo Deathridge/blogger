@@ -57,7 +57,13 @@ $( document ).ready(function() {
 						.setView([39.50, -98.35], 3);
 
 					L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map);
-				
+
+					// Add a new line to the map with no points.
+					var polyline = L.polyline([]).addTo(map);
+					geojson.forEach(function addPoint(geo){
+						polyline.addLatLng(
+        					L.latLng(geo.geometry.coordinates[0], geo.geometry.coordinates[1]));
+					});
 		
 	};
 

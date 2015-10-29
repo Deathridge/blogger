@@ -14,6 +14,7 @@ $( document ).ready(function() {
 		url: "http://api.blogger.danielbetteridge.com/locations?format=json",
 		success: function(data){
 			locations = data;
+			console.log(locations);
 			async.each(locations, function(location, callback){
 				
 				$.ajax({

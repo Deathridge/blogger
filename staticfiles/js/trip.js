@@ -8,7 +8,13 @@ $( document ).ready(function() {
 	$('#flex-menu-2').click(function(){
 		window.location.href = "../templates/blog.html";
 	});
+
+	$('#flex-menu-1').click(function(){
+		window.location.href = "../templates/trip.html";
+	});
+
 	var geojson =[];
+	function getLocations(){
 	$.ajax({
 		method: "GET",
 		url: "http://api.blogger.danielbetteridge.com/locations?format=json",
@@ -25,8 +31,11 @@ $( document ).ready(function() {
     				
 		}
 	});
+	};
 
+	getLocations();
 
+	//Builds geoJSON objects for each location, filling in description and location for marker
 	function buildGeoJSON(location) {
 		var locationjson = {
 							type: location.LocationTypeGeoJSON, 
@@ -43,6 +52,7 @@ $( document ).ready(function() {
 		geojson.push(locationjson);
 		return geojson;
 	};
+
 	//Loads map to html element with id of abs-map-i and uses coordinates, name and zoom level set in location
 	function loadMap(geojson) {
 
@@ -61,6 +71,7 @@ $( document ).ready(function() {
 
 					// Add a new line to the map with no points.
 					var polyline = L.polyline([]).addTo(map);
+					// For each point in the geojson data , create line between it and the previous point
 					geojson.forEach(function addPoint(geo){
 						polyline.addLatLng(
         					L.latLng(geo.geometry.coordinates[1], geo.geometry.coordinates[0]));

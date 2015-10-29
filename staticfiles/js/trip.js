@@ -34,7 +34,7 @@ $( document ).ready(function() {
 								name: location.Landmark,								 
 								popupContent: location.LandmarkDescription
 
-							}
+							},
 							geometry: { 
 								type: "Point", 
 								coordinates: [location.Longitude, location.Latitude]

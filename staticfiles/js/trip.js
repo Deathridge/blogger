@@ -31,8 +31,8 @@ $( document ).ready(function() {
 		var locationjson = {
 							type: location.LocationTypeGeoJSON, 
 							properties: {
-								name: location.Landmark,								 
-								popupContent: location.LandmarkDescription
+								title: location.Landmark,								 
+								description: location.LandmarkDescription
 
 							},
 							geometry: { 

@@ -15,26 +15,14 @@ $( document ).ready(function() {
 		success: function(data){
 			locations = data;
 			console.log(locations);
-			async.each(locations, function(location, callback){
+			
+			locations.forEach(function addLocation(location){
+				geojson = buildGeoJSON(location);
+			});
+			
 				
-				$.ajax({
-				method: "GET",
-				//async: false,
-				url: location.url,
-				success: function(data){
-					geojson = buildGeoJSON(data);
-					callback();					
-				}
-				});
-				}, function(err){
-					if( err ) {
-      					// One of the iterations produced an error.
-      					// All processing will now stop.
-      					console.log('A file failed to process');
-    				} else {
-      					loadMap(geojson);
-    				}				
-				});	
+      		loadMap(geojson);
+    				
 		}
 	});
 
